@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('./assets/mountains-1412683.png');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}

@@ -1,0 +1,34 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="quantity" class="form-label">Input Quantity</label>
+                <input type="number" class="form-control form-control-lg" [(ngModel)]="quantity" (input)="convert()"
+                       id="quantity" placeholder="please type quantity">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="current" class="form-label">Current currency</label>
+                <select class="form-control form-control-lg" id="current" [(ngModel)]="current" (change)="convert()">
+                    <option *ngFor="let coin of coins">{{coin}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label for="newCurrency" class="form-label">New Currency</label>
+                <select class="form-control form-control-lg" id="newCurrency" [(ngModel)]="newCurrency" (change)="convert()">
+                    <option *ngFor="let coin of coins">{{coin}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <h5 *ngIf="quantity > 0" class="text-center">
+        <span class="badge bg-success">{{quantity}} {{current}}</span>
+        <span class="badge bg-secondary"> Equals </span>
+        <span class="badge bg-success">{{total | number: '0.0-2'}} {{newCurrency}}</span>
+    </h5>
+</div>
