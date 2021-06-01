@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: #e9d362;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #333333, #e9d362);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333333, #e9d362); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.titleFont {
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+.textError {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+    text-transform: uppercase;
+}

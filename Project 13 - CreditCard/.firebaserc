@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "creditcarddb-a8522": {
+      "hosting": {
+        "CreditCardDB": [
+          "creditcarddb-a8522"
+        ]
+      }
+    }
+  }
+}

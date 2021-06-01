@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-lg-4 offset-lg-4">
+        <h2 class="title">BMI Calculator</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="backItem" [ngClass]="{ 'deactivateGender': gender === 'Female' }">
+                    <div class="container" style="cursor: pointer;" (click)="male()">
+                        <i class="fas fa-mars gender"></i>
+                        <p>Male</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="backItem" [ngClass]="{'deactivateGender': gender === 'Male' }">
+                    <div class="container" style="cursor: pointer;" (click)="female()">
+                        <i class="fas fa-venus gender"></i>
+                        <span>Female</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="backItem">
+                    <div class="container">
+                        <p>Height</p>
+                        <div class="styleNum">{{height}}
+                            <span class="cm">cm</span>
+                        </div>
+                        <input type="range" (input)="changeHeight($event)" [value]="height" min="70" max="220" class="form-range">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="backItem">
+                    <div class="container">
+                        <p>Weight</p>
+                        <div class="styleNum">
+                            {{weight}}
+                        </div>
+                        <div>
+                            <i class="fas fa-minus minusPlus" (click)="weight = weight - 1"></i>
+                            <i class="fas fa-plus minusPlus" (click)="weight = weight + 1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="backItem">
+                    <div class="container">
+                        <p>Age</p>
+                        <div class="styleNum">
+                            {{age}}
+                        </div>
+                        <div>
+                            <i class="fas fa-minus minusPlus" (click)="age = age - 1"></i>
+                            <i class="fas fa-plus minusPlus" (click)="age = age + 1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <button (click)="calculateBMI()" class="btn btn-primary btn-lg btn-block btn-color">Calculate</button>
+            </div>
+        </div>
+    </div>
+</div>

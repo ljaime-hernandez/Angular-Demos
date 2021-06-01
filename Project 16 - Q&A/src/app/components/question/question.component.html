@@ -1,0 +1,15 @@
+<h4 class="card-title">{{obtainQuestion()}}</h4>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let answer of listQuestions[_questionService.indexQuestion].answers; let i = index"
+        (click)="selectedAnswer(answer, i)" [ngClass]="addClassOption(answer)">
+        {{answer.name}}
+        <span class="badge" *ngIf="iconCorrect(answer)">
+            <i class="material-icons material-icons-correct">check_circle</i>
+        </span>
+        <span class="badge" *ngIf="iconIncorrect(answer)">
+            <i class="material-icons material-icons-incorrect">clear</i>
+        </span>
+    </li>
+</ul>
+<br>
+<app-buttons></app-buttons>

@@ -1,0 +1,20 @@
+<div class="row mt-5 d-flex justify-content-center" *ngIf="loading">
+    <div class="spinner-grow text-primary spinner-color" role="status"></div>
+    <div class="spinner-grow text-primary spinner-color" role="status"></div>
+    <div class="spinner-grow text-primary spinner-color" role="status"></div>
+</div>
+<div class="row">
+    <div class="col-lg-8 offset-lg-2 mt-5">
+        <div class="card" style="width: 25rem; margin: 0 auto;">
+            <img [src]="imgUrl" class="card-img-top img-thumbnail">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{ firstName }}</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Email: {{email}}</li>
+                    <li class="list-group-item">Gender: {{gender}}</li>
+                </ul>
+            </div>
+            <button class="btn btn-primary btn-block btn-xl" routerLink="/dashboard">Go Back</button>
+        </div>
+    </div>
+</div>

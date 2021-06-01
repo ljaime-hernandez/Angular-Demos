@@ -1,0 +1,29 @@
+<h5 class="card-title">Results</h5>
+<p class="card-text">These are the results of the questionnaire</p>
+<div *ngFor="let question of listQuestions; let i = index">
+    <h4 class="card-title">{{question.qDescription}}</h4>
+    <ul class="list-group">
+        <ng-container *ngFor="let answer of listQuestions[i].answers; let j = index">
+            <li class="list-group-item" [ngClass]="{
+                'list-group-item-success': answer.isCorrect == 1 && userAnswers[i] == j,
+                'list-group-item-danger': answer.isCorrect == 0 && userAnswers[i] == j
+            }">
+                {{answer.name}}
+                <span class="badge">
+                    <i class="material-icons material-icons-correct" *ngIf="answer.isCorrect == 1 && userAnswers[i] == j">check_circle</i>
+                </span>
+                <span class="badge">
+                    <i class="material-icons material-icons-incorrect" *ngIf="answer.isCorrect == 0 && userAnswers[i] == j">clear</i>
+                </span>
+            </li>
+        </ng-container>
+    </ul>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="col-lg-4 offset-lg-4">
+        <button class="btn btn-info btn-lg btn-block"
+                (click)="goBack()">Go Back</button>
+    </div>
+</div>

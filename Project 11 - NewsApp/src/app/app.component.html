@@ -1,0 +1,6 @@
+<app-navbar [title]="'News Lookup'"></app-navbar>
+<div class="container">
+    <app-form (selectedParameters)="searchNews($event)"></app-form>
+    <app-spinner *ngIf="loading"></app-spinner>
+    <app-list-news [listNews]="listNews"></app-list-news>
+</div>

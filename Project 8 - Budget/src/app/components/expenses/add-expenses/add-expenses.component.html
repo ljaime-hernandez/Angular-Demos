@@ -1,0 +1,14 @@
+<h4 class="text-center">Add Expenses</h4>
+<hr>
+<div *ngIf="incorrectForm" class="text-center">
+    <span class="badge bg-danger textError">{{incorrectText}}</span>
+</div>
+<div class="form-group mt-4">
+    <label for="expense">Expense</label>
+    <input type="text" id="expense" [(ngModel)]="nameExpense" class="form-control form-control-lg" placeholder="Ex: rent">
+</div>
+<div class="form-group mt-4">
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" [(ngModel)]="quantity" class="form-control form-control-lg" placeholder="Add quantity">
+</div>
+<button class="btn btn-secondary btn-block btn-lg mt-2" (click)="addExpense()">Add expense</button>

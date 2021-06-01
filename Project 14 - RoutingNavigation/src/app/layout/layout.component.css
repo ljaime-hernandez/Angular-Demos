@@ -1,0 +1,28 @@
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: black;
+}
+
+hr {
+    border-color: black;
+    border-width: 3px;
+    max-width: 65px;
+    margin-right: 47%;
+    margin-left: 47%;
+    color: black;
+    opacity: 1;
+    border-radius: 20px;
+}
+
+hr:not([size]) {
+    height: 5px;
+}
+
+.layout {
+    background: url(../../assets/img/cloud-2680190_1920.jpg) no-repeat center center fixed;
+    height: 100vh;
+    background-size: cover;
+}
+

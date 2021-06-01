@@ -1,0 +1,69 @@
+<div class="row mt-2">
+    <div class="col-lg-6">
+        <h2>Employee list</h2>
+    </div>
+    <div class="col-lg-6" style="text-align: right;">
+        <button routerLink="/add" mat-raised-button color="warn">Add</button>
+    </div>
+</div>
+<mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex: Lucas" autocomplete="off">
+  </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+        <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+    
+        <!-- Position Column -->
+        <ng-container matColumnDef="fullName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Full Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+    
+        <!-- Weight Column -->
+        <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>
+        <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="contractDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Contract Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.contractDate | date:'dd/mm/yy'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Gender </th>
+            <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="civilStatus">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Civil Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.civilStatus}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="modify">
+            <th mat-header-cell *matHeaderCellDef> Symbol </th>
+            <td mat-cell *matCellDef="let element; let i = index">
+                <a routerLink="edit/{{ i }}" class="pointer" style="color: skyblue">
+                    <mat-icon>edit</mat-icon>
+                </a>
+                <a class="pointer" style="color: red" (click)="deleteEmployee(i)">
+                    <mat-icon>delete</mat-icon>
+                </a>
+            </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>

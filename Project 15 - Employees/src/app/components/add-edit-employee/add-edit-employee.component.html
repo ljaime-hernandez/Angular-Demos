@@ -1,0 +1,90 @@
+<div class="row">
+    <div class="col-6">
+        <h2>{{action}} Employee</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4" style="margin-left: 20px;">
+        <form autocomplete="off" [formGroup]="myForm">
+            <div class="col-lg-12">
+                <mat-form-field class="example-container" [style.fontSize.px]=16>
+                    <mat-label>Full Name</mat-label>
+                    <input matInput formControlName="fullName">
+                  </mat-form-field>
+                  <div *ngIf="myForm.get('fullName').hasError('required') && myForm.get('fullName').touched" style="margin-top: -20px;">
+                      <span class="mda-form-msg">This field is <strong>required</strong></span>
+                  </div>
+                  <div *ngIf="myForm.get('fullName').hasError('maxlength') && myForm.get('fullName').touched" style="margin-top: -20px;">
+                    <span class="mda-form-msg">This field should not have more than <strong>40 characters</strong></span>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <mat-form-field class="example-container" [style.fontSize.px]=16>
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+                <div *ngIf="myForm.get('email').hasError('required') && myForm.get('email').touched" style="margin-top: -20px;">
+                    <span class="mda-form-msg">This field is <strong>required</strong></span>
+                </div>
+                <div *ngIf="myForm.get('email').hasError('email') && myForm.get('email').touched" style="margin-top: -20px;">
+                  <span class="mda-form-msg">This field should have a <strong>valid email</strong></span>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="col-lg-12">
+                <mat-form-field class="example-container" [style.fontSize.px]=16>
+                    <mat-label>Contract date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="contractDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #picker></mat-datepicker>
+                  </mat-form-field>
+                  <div *ngIf="myForm.get('contractDate').hasError('required') && myForm.get('contractDate').touched" style="margin-top: -20px;">
+                    <span class="mda-form-msg">This field is <strong>required</strong></span>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <mat-form-field class="example-container" [style.fontSize.px]=16>
+                    <mat-label>Phone</mat-label>
+                    <input matInput formControlName="phone">
+                </mat-form-field>
+                <div *ngIf="myForm.get('phone').hasError('required') && myForm.get('phone').touched" style="margin-top: -20px;">
+                    <span class="mda-form-msg">This field is <strong>required</strong></span>
+                </div>
+                <div *ngIf="myForm.get('phone').hasError('maxlength') && myForm.get('phone').touched" style="margin-top: -20px;">
+                    <span class="mda-form-msg">This field should not have more than <strong>10 characters</strong></span>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <mat-form-field class="example-container" [style.fontSize.px]=16>
+                <mat-label>Civil Status</mat-label>
+                <mat-select formControlName="civilStat">
+                    <mat-option *ngFor="let status of civilStatus" [value]="status">
+                    {{status}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div *ngIf="myForm.get('civilStat').hasError('required') && myForm.get('civilStat').touched" style="margin-top: -20px;">
+                <span class="mda-form-msg">This field is <strong>required</strong></span>
+            </div>
+            </div>
+            <div class="col-lg-12">
+                <mat-radio-group aria-label="Select gender" formControlName="gender">
+                    <mat-radio-button value="Male" style="margin-right: 10px;">Male</mat-radio-button>
+                    <mat-radio-button value="Female">Female</mat-radio-button>
+                  </mat-radio-group>
+                  <div *ngIf="myForm.get('gender').hasError('required') && myForm.get('gender').touched" style="margin-top: -20px;">
+                    <span class="mda-form-msg">This field is <strong>required</strong></span>
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-12">
+                <button class="btn btn-success btn-lg float-right" type="button" (click)="saveEmployee()" [disabled]="myForm.invalid">Accept</button>
+                <button class="btn btn-secondary btn-lg float-right" type="button" routerLink="/">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-4 offset-lg-2">
+        <img src="../../../assets/images/add-user-xxl.png" alt="" width="95%" height="95%">
+    </div>
+</div>
