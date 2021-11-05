@@ -9,35 +9,35 @@ to project 16 which was the hardest
 
 Project 1 - Piano
 
-link: rainbow-piano-app.netlify.app
+link: https://rainbow-piano-app.netlify.app
 
 7-tile piano using wav files triggered by a click event
 
 
 Project 2 - Dices
 
-link: random-dice-app.netlify.app
+link: https://random-dice-app.netlify.app
 
 Random dice number generator which triggers a message when both dice numbers are the same
 
 
 Project 3 - Tasks
 
-link: daily-tasks-tracker-app.netlify.app
+link: https://daily-tasks-tracker-app.netlify.app
 
 Task enlisting which displays the task inputs, includes a check mark and a delete button
 
 
 Project 4 - Exchange
 
-link: currency-conversor-app.netlify.app
+link: https://currency-conversor-app.netlify.app
 
 For currency conversion which dinamically calculates the input number and clearly compares them
 
 
 Project 5 - BMI
 
-link: responsive-bmi-calculator.netlify.app
+link: https://responsive-bmi-calculator.netlify.app
 
 To calculate body mass index using gender, height, weight and age as inputs, leading to a message
 stating if, based on the calculation, the inputs indicate a normal weight, low weight or weight excess.
@@ -45,21 +45,21 @@ stating if, based on the calculation, the inputs indicate a normal weight, low w
 
 Project 6 - ConnectedComponents
 
-link: salary-table-app.netlify.app
+link: https://salary-table-app.netlify.app
 
 Developed as a brief demonstration for communication between child and parent components, and visceversa.
 
 
 Project 7 - Appointments
 
-link: medical-appointments-schedule.netlify.app
+link: https://medical-appointments-schedule.netlify.app
 
 Appointments with time, date, personal information and symptoms, dinamically enlisted on the page.
 
 
 Project 8 - Budget Calculator
 
-link: responsive-budget-calculator-app.netlify.app
+link: https://responsive-budget-calculator-app.netlify.app
 
 Add a budget number, then dinamically lets you enlist your expenses by name and amount, while letting you
 compare the initial budget with the remaining amount.
@@ -67,7 +67,7 @@ compare the initial budget with the remaining amount.
 
 Project 9 - Weather
 
-link: temperature-humidity-weather-app.netlify.app
+link: https://temperature-humidity-weather-app.netlify.app
 
 by using an API from the openweathermap webpage, you can use the name of any city in the world to display
 the temperature, humidity and weather conditions on that area.
@@ -75,7 +75,7 @@ the temperature, humidity and weather conditions on that area.
 
 Project 10 - URL Shortener
 
-link: bit-ly-shorturl-app.netlify.app
+link: https://bit-ly-shorturl-app.netlify.app
 
 uses an API from the bitly webpage for us to use one of its features, which is the shortening of a webpage
 link to make it compact and practical when used.
@@ -83,7 +83,7 @@ link to make it compact and practical when used.
 
 Project 11 - News Lookup
 
-link:  news-by-country-app.netlify.app
+link:  https://news-by-country-app.netlify.app
 
 uses the API from the newsapi webpage to dinamically enlist news filtered by both categories and countries of
 preference.
@@ -91,7 +91,7 @@ preference.
 
 Project 12 - Random Pictures
 
-link: pixabay-pictures-search-app.netlify.app
+link: https://pixabay-pictures-search-app.netlify.app
 
 uses an API from Pixabay to look for random pictures, it displays a small version of the image with its amount
 of likes and views, along with a button to display the full resolution of it. If the request display more than
@@ -101,7 +101,7 @@ the desired image.
 
 Project 13 - Credit Card Database
 
-link: firebase-creditcard-database-app.netlify.app
+link: https://firebase-creditcard-database-app.netlify.app
 
 The webapp has a connection to a Firebase database where information of credit card owners is stored. at the left
 side of the screen we have a form to include new card owners with the respective information, the forn wont accept
@@ -112,7 +112,7 @@ Finally, the card list is then displayed at the right side of the screen along w
 
 Project 14 - Routing and Navigation
 
-link: routing-and-navigation-app.netlify.app
+link: https://routing-and-navigation-app.netlify.app
 
 brief demonstration of the use of angular routes, i use both dynamic parameters and nested routes. The main dashboard
 is connected to an API from the goRest webapp, which returns fake users with several data, the data retrieved is then
@@ -141,7 +141,7 @@ missing or if the information is incorrect.
 
 Project 16 - Questions and Answers
 
-link: qna-app.netlify.app
+link: https://qna-app.netlify.app
 
 Small questionare working as a knowledge game which will validate if the option selected is correct or incorrect. the 
 webapp will then save the answers and will display all of them after all the questions have been checked. Finally the webapp 
